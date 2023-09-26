@@ -1,0 +1,46 @@
+/* Container for the calendar */
+.horizontal-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between left and right arrows */
+  margin-top: 5px;
+}
+
+/* Button styles (left and right navigation buttons) */
+.horizontal-calendar-button {
+   background-color: white; 
+  color: grey;
+  font-weight: bold;
+  padding-top: 35px;
+  font-size:larger;
+  border: none;
+  /* border: 1px solid #007bff; */
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+
+/* Calendar item container */
+.horizontal-calendar-item {
+  text-align: center;
+  display: flex; /* Display items in a row */
+  flex-direction: column; /* Stack day and date vertically within each item */
+  align-items: center;
+  margin: 0 10px; /* Add space between calendar items */
+}
+
+/* Rounded circle styles for date */
+.rounded-circle {
+  width: 60px; /* Adjust width to fit both day and date */
+  height: 60px; /* Adjust height to fit both day and date */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto; /* Center the circles horizontally */
+}
+
+/* Current date styles */
+.current-date {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow for current date */
+}

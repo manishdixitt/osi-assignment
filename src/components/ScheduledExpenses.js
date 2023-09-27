@@ -14,7 +14,7 @@ const ScheduledExpenses = () => {
       <div className="secard-container">
         {scheduledExpenses.map((expense) => (
           <div key={expense.id} className="card">
-            <span className="price">$ {expense.amount}/m</span>
+            <span className="price">₹ {expense.amount}/m</span>
             <img src={expense.image} alt={expense.name} className="logo" />
             <p className="title" style={{ textAlign: "left" }}>
               {expense.name}

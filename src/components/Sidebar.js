@@ -185,7 +185,7 @@
 
 // export default Sidebar;
 import React, { useState } from "react";
-import { Button, Modal, Form } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
 import { addBank, addCategory } from "../components/data";
 import { data } from "./data";
 
@@ -232,35 +232,35 @@ function Sidebar() {
         </p>
       </div>
       <div className="accounts">
-        <h6>Accounts</h6>
-        <ul>
+        <h6>
+          <strong>Accounts</strong>
+        </h6>
+        <ul style={{ marginLeft: "50px" }}>
           {data.banks.map((bank) => (
-            <li key={bank.id} style={{ listStyle: "" }}>
-              {bank.name}
-            </li>
+            <li key={bank.id}>{bank.name}</li>
           ))}
-          <li>
-          <div className="add-container">
-      <a href="#" onClick={() => handleShow("bank")}>
-        <span className="add-icon">+</span> Add Another
-      </a>
-    </div>
+          <li style={{ listStyle: "none", marginLeft: "-18px" }}>
+            {/* <div className="add-container"> */}
+            <a href="#" onClick={() => handleShow("bank")}>
+              <span className="add-icon">+</span> Add Another
+            </a>
+            {/* </div> */}
           </li>
         </ul>
       </div>
 
       <div className="accounts">
-        <h6>Categories of Expenses</h6>
-        <ul>
+        <h6>
+          <strong>Categories of Expenses</strong>
+        </h6>
+        <ul style={{ marginLeft: "50px" }}>
           {data.categories.map((category) => (
             <li key={category.id}>{category.name}</li>
           ))}
-          <li>
-          <div className="add-container">
-      <a href="#" onClick={() => handleShow("category")}>
-        <span className="add-icon">+</span> Add More
-      </a>
-    </div>
+          <li style={{ listStyle: "none", marginLeft: "-18px" }}>
+            <a href="#" onClick={() => handleShow("category")}>
+              <span className="add-icon">+</span> Add More
+            </a>
           </li>
         </ul>
       </div>
